@@ -33,12 +33,12 @@ function execute() {
         output.innerHTML +=`
    <div class='card border border-primary p-3'>
    <h4 class='border-bottom'>${video.snippet.channelTitle}</h4>
-   <iframe width = "1280" height = "720" src = "https://www.youtube.com/embed/${videoDetails.id}" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+   <iframe width = "1280" height = "720" src = "https://www.youtube.com/embed/${video.id}" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
    <p>${video.snippet.localized.title}<p>
    <button class='btn btn-primary'>${video.statistics.likeCount} Likes</button> 
    <button class='btn btn-danger'>${video.statistics.dislikeCount} Dislike</button>       
    </div>
-  `;console.log(videoDetails.id);
+  `;console.log(video.id);
       });
 
       console.log("Response", response);
