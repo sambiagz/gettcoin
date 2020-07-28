@@ -38,7 +38,7 @@ function execute() {
    <button class='btn btn-primary'>${video.statistics.likeCount} Likes</button> 
    <button class='btn btn-danger'>${video.statistics.dislikeCount} Dislike</button>       
    </div>
-  `;
+  `;console.log(videoDetails.id);
       });
 
       console.log("Response", response);
