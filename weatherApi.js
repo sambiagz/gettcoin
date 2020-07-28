@@ -7,11 +7,12 @@ function getWeather(){
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputLocation.value}&appid=${apiKey}`).then(res=>{
   return res.json();
 }).then(data=>{
+  var temp=data.main.temp-273;
   output.innerHTML+=`
    <div class='card border border-primary p-3 m-2'>
    <h4 class='border-bottom'>${data.name} ${data.sys.country}</h4>
    <p>Humidity : ${data.main.humidity}<p>
-   <p>Temperature : ${data.main.temp}<p> 
+   <p>Temperature : ${temp.toFixed(2)} 'celcius <p> 
    <p>Pressure : ${data.main.pressure}<p>
    <p>Weather : ${data.weather[0].description}<p>        
    </div>
